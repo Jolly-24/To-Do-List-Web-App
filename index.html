@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" href="imgs/logo.jpg.png">
+         <!-- ?========> Font Awesome -->
+         <link rel="stylesheet" href="css/all.min.css" />
+         <!-- ?========> Bootstrap -->
+         <link rel="stylesheet" href="css/bootstrap.min.css" />
+         <!-- ?========> Main Style Sheet -->
+         <link rel="stylesheet" href="css/main.css" />
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<main >
+    <div class="container mt-1 p-0 p-xl-5 pt-0 d-flex align-items-center justify-content-center flex-column">
+        <h1 class="text-center display-1 fw-bold d-flex align-items-center justify-content-center gap-1 z-1"><img src="imgs/logo.jpg.png"> To Do List</h1>
+    <div class="input-task position-relative w-75 d-flex align-items-center justify-content-between flex-column gap-3  ">
+        <div class="position-relative w-75">
+        <input type="text" placeholder="Add New Task" class="ps-5 w-100 py-2 rounded-2" name="task-name" id="task-name" required>
+        <i class="fa-solid fa-plus position-absolute add"></i>
+    </div>
+        <textarea name="description" id="description" placeholder="Description" class="w-75 ps-3 pt-2 rounded-2" required></textarea>
+        <div class="date w-100 d-flex align-items-center justify-content-center">
+         <label for="date" class="fs-4 fw-medium">Date</label>
+        <input type="date" class="w-50 ms-3 p-2 rounded-2" id="task-date" required>   
+        </div>
+        <button class="btn btn-success p-2 px-3 w-50" id="addBtn">ADD</button>
+        <button class="btn btn-primary p-2 px-3 w-50 d-none " id="updateBtn">UPDATE</button>
+        <span id="message"></span>
+    </div>
+    <div class="tasks mt-4 w-75 px-0  d-flex align-items-center justify-content-center flex-column gap-1" id="tasks-container"></div>
+    <div class="dones mt-4 w-100 d-flex align-items-center justify-content-center flex-column">
+        <h2 class="display-2 fw-bold">Completed Tasks</h2>  
+      <div class="completed  w-75" id="completeContainer">
+
+    </div>  
+    </div>
+
+</div>
+                 <!-- alert message -->
+                 <div class="toast">
+                    <div class="toast-content">
+                        <i class="fas fa-solid fa-check check"></i>
+                        <div class="message">
+                            <span class="text text-1">Done</span>
+                            <span class="text text-2">This task is deleted </span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-xmark close"></i>
+                    <div class="progresss"></div>
+                </div>
+</main>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
